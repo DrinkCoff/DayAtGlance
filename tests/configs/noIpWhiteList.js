@@ -4,8 +4,11 @@
  * MIT Licensed.
  */
 
+
+var port = process.env.PORT || 8080;
+
 var config = {
-	port: 8080,
+	port: port,
 	ipWhitelist: ["x.x.x.x"],
 
 	language: "en",

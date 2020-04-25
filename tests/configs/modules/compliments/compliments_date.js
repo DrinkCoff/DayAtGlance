@@ -5,8 +5,11 @@
  * MIT Licensed.
  */
 
+
+var port = process.env.PORT || 8080;
+
 let config = {
-	port: 8080,
+	port: port,
 	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],
 
 	language: "en",

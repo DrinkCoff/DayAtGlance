@@ -9,6 +9,7 @@
 
 var MMSocket = function(moduleName) {
 
+    var port = process.env.PORT || 8080;
 	var self = this;
 
 	if (typeof moduleName !== "string") {
@@ -17,7 +18,7 @@ var MMSocket = function(moduleName) {
 
 	self.moduleName = moduleName;
 
-	self.socket = io("http://localhost:8080");
+	self.socket = io("http://localhost:" + port);
 	self.socket.on("notification", function(data) {
 		MM.sendNotification(data.notification, data.payload, Socket);
 	});
